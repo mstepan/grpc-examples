@@ -23,5 +23,9 @@ For unit tests execute the following command
 Code formatted using [spotless-maven-plugin](https://github.com/diffplug/spotless/tree/master/plugin-maven ). The `spotless:apply` called just before the compilation 
 phase to format code properly.
 
+## References
+
+The main repo for reference is [https://github.com/grpc/grpc-java](https://github.com/grpc/grpc-java/blob/master/examples/pom.xml)
+
 
 
