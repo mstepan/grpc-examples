@@ -93,6 +93,44 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>${enforcer.plugin.version}</version>
+        <executions>
+          <execution>
+            <id>enforce</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <bannedPlugins>
+                  <level>WARN</level>
+                  <excludes>
+                    <exclude>org.apache.maven.plugins:maven-verifier-plugin</exclude>
+                  </excludes>
+                  <message>Please consider using the maven-invoker-plugin
+                                        (http://maven.apache.org/plugins/maven-invoker-plugin/)!</message>
+                </bannedPlugins>
+                <requireJavaVersion>
+                  <version>21</version>
+                </requireJavaVersion>
+                <requireMavenVersion>
+                  <version>3.6.3</version>
+                </requireMavenVersion>
+                <requireOS>
+                  <family>unix</family>
+                </requireOS>
+                <banDuplicatePomDependencyVersions />
+                <requireUpperBoundDeps />
+                <requireReleaseVersion>
+                  <message>All SNAPSHOT dependencies banned!!!</message>
+                </requireReleaseVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
   <dependencies>

@@ -1,6 +1,11 @@
+//
+// As reference use https://github.com/grpc/grpc-java/blob/master/examples/example-hostname/src/main/proto/helloworld/helloworld.proto
+//
 syntax = "proto3";
 
 option java_package = "github.com.mstepan.grpc.examples.service.hello";
+
+package hello;
 
 // The greeting service definition.
 service HelloService {
