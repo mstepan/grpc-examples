@@ -86,7 +86,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>github.com.mstepan.grpc.examples.Main</mainClass>
+                  <mainClass>github.com.mstepan.grpc.examples.AppMain</mainClass>
                 </transformer>
               </transformers>
             </configuration>
